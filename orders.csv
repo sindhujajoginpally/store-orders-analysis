@@ -1,0 +1,15 @@
+OrderID,CustomerID,Product,Quantity,UnitPrice,OrderDate
+201,C1,Notebook,2.0,120,2026-02-01
+202,C2,pen set,5.0,45,2026-02-01
+203,C3,Backpack,1.0,899,2026-02-02
+204,C1,Notebook,1.0,120,2026-02-03
+205,C4,Water Bottle,,150,2026/02/03
+206,C2,PEN SET,3.0,45,2026-02-04
+207,C5,Backpack,1.0,899,2026-02-05
+208,C3,notebook,2.0,120,2026-02-05
+209,C6,Umbrella,1.0,350,2026-02-06
+210,C1,Water Bottle,2.0,150,2026-02-07
+211,C7,Backpack,1.0,899,2026-02-08
+212,C4,Umbrella,,350,2026-02-08
+213,C2,pen set,4.0,45,2026-02-09
+214,C8,Notebook,3.0,120,2026-02-10
