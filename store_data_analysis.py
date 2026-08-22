@@ -3,11 +3,11 @@ import pandas as pd  # imports the pandas library, nicknamed pd
 orders = pd.read_csv("orders.csv")
 customers = pd.read_csv("customers.csv")
 
-#print(orders.info())
-#print(customers.info())
+print(orders.info())
+print(customers.info())
 
-#print(orders.describe())
-#print(customers.describe())
+print(orders.describe())
+print(customers.describe())
 
 
 orders_cleaned = orders.dropna()  # creates a separate copy with ALL rows containing any missing value removed (not actually used later)
@@ -19,17 +19,17 @@ orders["CustomerID"] = orders["CustomerID"].str.strip()  # removes extra leading
 orders["Product"] = orders["Product"].str.lower()  # converts every product name to lowercase, so casing differences don't count as different products
 
 orders["OrderDate"] = pd.to_datetime(orders["OrderDate"], format="mixed")  # converts the Order Date column from text into real dates, handling multiple date formats
-#print(orders["OrderDate"])  # prints the cleaned, standardized dates
+print(orders["OrderDate"])  # prints the cleaned, standardized dates
 
 customers["CustomerName"] = customers["CustomerName"].str.strip()  # removes extra leading/trailing spaces from every name
 
-#print(orders.isnull().sum())
-#print(orders["Product"].unique())
-#print(orders["OrderDate"])
-#print(customers["CustomerName"].unique())
+print(orders.isnull().sum())
+print(orders["Product"].unique())
+print(orders["OrderDate"])
+print(customers["CustomerName"].unique())
 
 merged = orders.merge(customers, on="CustomerID")
-#print(merged)
+print(merged)
 
 merged["Total"] = merged["Quantity"] * merged["UnitPrice"]
 print(merged)
